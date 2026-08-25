@@ -58,7 +58,10 @@ A infraestrutura de dados já foi construída para suportar múltiplos circuitos
 
 - [x] Fase 1 — Descoberta e escopo dos dados: subgrafo do ring attractor
   extraído e validado a partir de dados reais e públicos do FlyWire.
-- [ ] Fase 2 — Modelo de simulação em Python
+- [x] Fase 2 — Modelo de simulação: leaky integrate-and-fire discreto no
+  tempo sobre o grafo real (`src/flywire_sim/`), rodável via CLI
+  (`python -m flywire_sim.run`), com estímulo configurável e 89 testes de
+  estabilidade numérica e propagação.
 - [ ] Fase 3 — Backend (FastAPI + WebSocket)
 - [ ] Fase 4 — Frontend (React)
 - [ ] Fase 5 — Testes finais e revisão
