@@ -26,11 +26,15 @@ build/
 .vite/
 *.local
 
-# --- Dados / cache do conectoma (grandes, não versionar) ---
-data/
-*.parquet
+# --- Dados / cache do conectoma ---
+# Dumps brutos completos (centenas de MB, baixados do Zenodo/CAVE): não versionar.
+data/raw/
 *.h5
 *.feather
+*.parquet
+# Exceção: subgrafos curados e pequenos (o recorte real usado pela simulação).
+!data/subgraphs/
+!data/subgraphs/**
 
 # --- Ambiente / segredos ---
 .env

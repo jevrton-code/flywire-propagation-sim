@@ -1,0 +1,112 @@
+{
+  "circuit": {
+    "slug": "ring_attractor_core",
+    "title": "Central complex head-direction (ring attractor) core",
+    "cell_types": [
+      "EPG",
+      "EPGt",
+      "PEN_a(PEN1)",
+      "PEN_b(PEN2)",
+      "PEG",
+      "Delta7"
+    ],
+    "synapse_threshold": 5,
+    "rationale": "The fly's head-direction system is the best-characterised recurrent circuit in the insect brain and the textbook example of a biological ring attractor: a single 'bump' of activity in the ellipsoid body tracks heading, EPG neurons carry the bump, PEN neurons shift it in proportion to angular velocity, PEG neurons feed it back, and Delta7 neurons provide the global inhibition that keeps exactly one bump alive. That makes it an unusually good target for a propagation demo: the circuit is strongly recurrent (so propagation does something more interesting than a feed-forward cascade), it mixes excitation and inhibition, and its expected qualitative behaviour is documented, so a viewer can sanity-check the simulation against published biology. It is also small enough (~150 neurons, ~2.7k edges) to render and simulate interactively in a browser, unlike the full ~140k-neuron connectome.",
+    "references": [
+      "Seelig, J.D. & Jayaraman, V. Neural dynamics for landmark orientation and angular path integration. Nature 521, 186-191 (2015). https://doi.org/10.1038/nature14446",
+      "Green, J., Adachi, A., Shah, K.K. et al. A neural circuit architecture for angular integration in Drosophila. Nature 546, 101-106 (2017). https://doi.org/10.1038/nature22343",
+      "Turner-Evans, D.B., Jensen, K.T., Ali, S. et al. The neuroanatomical ultrastructure and function of a biological ring attractor. Neuron 108, 145-163 (2020). https://doi.org/10.1016/j.neuron.2020.08.006",
+      "Hulse, B.K., Haberkern, H., Franconville, R. et al. A connectome of the Drosophila central complex reveals network motifs suitable for flexible navigation and context-dependent action selection. eLife 10, e66039 (2021). https://doi.org/10.7554/eLife.66039"
+    ]
+  },
+  "sources": {
+    "connectivity": {
+      "zenodo_record": "10676866",
+      "doi": "10.5281/zenodo.10676866",
+      "concept_doi": "10.5281/zenodo.10676865",
+      "title": "FlyWire Whole-brain Connectome Connectivity Data",
+      "version": "783.0",
+      "publication_date": "2024-06-02",
+      "license": "CC-BY-4.0",
+      "filename": "proofread_connections_783.feather",
+      "size_bytes": 852022274,
+      "md5": "f48f972d262323a102aed49af1396b8a",
+      "url": "https://zenodo.org/records/10676866"
+    },
+    "annotations": {
+      "repo": "flyconnectome/flywire_annotations",
+      "tag": "v2.1.0",
+      "path": "supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "published_at": "2024-07-30",
+      "md5": "8527e0a95ed5f112766b13260a91e8e2",
+      "url": "https://github.com/flyconnectome/flywire_annotations/releases/tag/v2.1.0",
+      "type_columns_searched": [
+        "cell_type",
+        "hemibrain_type"
+      ],
+      "reference": "Schlegel, P., Yin, Y., Bates, A.S. et al. Whole-brain annotation and multi-connectome cell typing of Drosophila. Nature 634, 139-152 (2024). https://doi.org/10.1038/s41586-024-07686-5"
+    }
+  },
+  "licensing": [
+    "Connectivity dump (Zenodo 10.5281/zenodo.10676866): CC-BY-4.0, as declared in the Zenodo record metadata.",
+    "FlyWire community proofreading and annotations: the FlyWire Terms of Service (https://flywire.ai/tos) state that edits and annotations 'will be made freely available under a CC-BY-NC 4.0 license'. The stricter non-commercial clause therefore governs any derived product that embeds the annotations."
+  ],
+  "citations": [
+    "Dorkenwald, S., Matsliah, A., Sterling, A.R. et al. Neuronal wiring diagram of an adult brain. Nature 634, 124-138 (2024). https://doi.org/10.1038/s41586-024-07558-y",
+    "Schlegel, P., Yin, Y., Bates, A.S. et al. Whole-brain annotation and multi-connectome cell typing of Drosophila. Nature 634, 139-152 (2024). https://doi.org/10.1038/s41586-024-07686-5",
+    "Eckstein, N., Bates, A.S., Champion, A. et al. Neurotransmitter classification from electron microscopy images at synaptic sites in Drosophila melanogaster. Cell 187, 2574-2594 (2024). https://doi.org/10.1016/j.cell.2024.03.016",
+    "Buhmann, J., Sheridan, A., Malin-Mayor, C. et al. Automatic detection of synaptic partners in a whole-brain Drosophila electron microscopy data set. Nature Methods 18, 771-774 (2021). https://doi.org/10.1038/s41592-021-01183-7"
+  ],
+  "ei_rule": {
+    "excitatory": [
+      "acetylcholine"
+    ],
+    "inhibitory": [
+      "gaba",
+      "glutamate"
+    ],
+    "modulatory_weight_zero": [
+      "serotonin",
+      "dopamine",
+      "octopamine"
+    ],
+    "quote": "As a rule, we assume that cholinergic neurons are excitatory and GABAergic and glutamatergic neurons are inhibitory.",
+    "quote_source": "Dorkenwald et al., Nature 634, 124-138 (2024)",
+    "nt_source": "predicted",
+    "nodes_with_known_nt": 150,
+    "nodes_predicted_disagreeing_with_known": 2
+  },
+  "counts": {
+    "nodes": 153,
+    "edges": 2695,
+    "total_synapses": 38141,
+    "orphan_nodes": 0,
+    "nodes_by_cell_type": {
+      "Delta7": 40,
+      "EPG": 47,
+      "EPGt": 4,
+      "PEG": 20,
+      "PEN_a(PEN1)": 20,
+      "PEN_b(PEN2)": 22
+    },
+    "nodes_by_polarity": {
+      "excitatory": 113,
+      "inhibitory": 39,
+      "modulatory": 1
+    },
+    "nodes_by_side": {
+      "right": 77,
+      "left": 76
+    },
+    "edges_by_polarity": {
+      "excitatory": 2088,
+      "inhibitory": 585,
+      "modulatory": 22
+    },
+    "syn_count_min": 5,
+    "syn_count_max": 89,
+    "syn_count_median": 10.0
+  },
+  "generated_at": "2026-08-25T17:01:20+00:00",
+  "generator": "flywire_data.build_subgraph"
+}

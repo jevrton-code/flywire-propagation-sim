@@ -27,15 +27,41 @@ citável. Precisão de engenharia > sofisticação do modelo biológico.
 ## Restrição de escopo (MVP)
 
 O grafo completo (140k nós / 50M arestas) é grande demais para uma simulação
-interativa em navegador na v1. Um subconjunto tratável do conectoma é escolhido
-e justificado — por exemplo, um circuito documentado publicamente (sistema
-olfativo, detecção de movimento visual) ou os N neurônios de maior grau de um
-circuito. O grafo completo não é carregado na v1.
+interativa em navegador na v1. O MVP simula um único circuito tratável e
+documentado; outros circuitos entram como opções adicionais em fases futuras
+(ver Roadmap). O grafo completo não é carregado em nenhuma fase.
+
+### Circuito do MVP: bússola / ring attractor do complexo central
+
+153 neurônios (`EPG`, `EPGt`, `PEN_a`, `PEN_b`, `PEG`, `Delta7`), 2.695 conexões
+reais extraídas do conectoma FlyWire (snapshot v783, limiar de 5 sinapses). É o
+circuito recorrente mais bem caracterizado do cérebro da mosca: um "bump" de
+atividade no *ellipsoid body* rastreia a direção da cabeça do animal. Detalhes
+completos de proveniência, licença, regra excitatório/inibitório e limitações
+assumidas em [`data/README.md`](data/README.md).
+
+### Roadmap — próximos circuitos
+
+O MVP entrega apenas o circuito acima. Já estão escopados e planejados para
+fases seguintes:
+
+- **Via olfativa** (ORNs → lobo antenal → corpo pedunculado) — circuito
+  majoritariamente feed-forward, bom contraste com o ring attractor recorrente.
+- **Detecção de *looming*/fuga** (LC4/LPLC2 → neurônio descendente gigante) —
+  cadeia sensório-motora curta com saída comportamental clara.
+
+A infraestrutura de dados já foi construída para suportar múltiplos circuitos
+(`flywire_data.circuits` é um registro extensível) — ver §8 de
+[`data/README.md`](data/README.md).
 
 ## Status
 
-Projeto em fase inicial — ainda sem código de dados, simulação, backend ou
-frontend. Este README será atualizado conforme cada fase for concluída.
+- [x] Fase 1 — Descoberta e escopo dos dados: subgrafo do ring attractor
+  extraído e validado a partir de dados reais e públicos do FlyWire.
+- [ ] Fase 2 — Modelo de simulação em Python
+- [ ] Fase 3 — Backend (FastAPI + WebSocket)
+- [ ] Fase 4 — Frontend (React)
+- [ ] Fase 5 — Testes finais e revisão
 
 ## Critério de "pronto" para v1
 
