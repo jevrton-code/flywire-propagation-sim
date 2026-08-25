@@ -1,0 +1,43 @@
+# Arquivos de setup/kickoff do Claude Code (não fazem parte do produto)
+.claude/
+claude-code-setup/
+CLAUDE.md
+KICKOFF_PROMPT.md
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# --- Node / Frontend ---
+node_modules/
+dist/
+build/
+.vite/
+*.local
+
+# --- Dados / cache do conectoma (grandes, não versionar) ---
+data/
+*.parquet
+*.h5
+*.feather
+
+# --- Ambiente / segredos ---
+.env
+.env.*
+!.env.example
+
+# --- Editor / SO ---
+.vscode/
+.idea/
+.DS_Store
