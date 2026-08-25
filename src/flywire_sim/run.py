@@ -155,7 +155,7 @@ def _report(result: SimulationResult, graph, stimulus) -> dict:
         "downstream_neurons_that_fired": len(downstream),
         "fraction_of_circuit_recruited": round(len(fired) / max(result.n_neurons, 1), 4),
         "total_spikes": total_spikes,
-        "spikes_by_cell_type": dict(sorted(types.items())),
+        "neurons_fired_by_cell_type": dict(sorted(types.items())),
         "first_spike_step_by_cell_type": dict(sorted(first_by_type.items())),
         "peak_step": peak.get("step"),
         "peak_n_spiked": peak.get("n_spiked"),

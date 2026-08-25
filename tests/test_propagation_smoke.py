@@ -304,7 +304,7 @@ def test_cli_runs_and_reports_propagation(capsys, tmp_path):
     assert report["numerically_finite"] is True
     assert report["downstream_neurons_that_fired"] > 0
     assert report["neurons_that_fired"] > 0
-    assert set(report["spikes_by_cell_type"]) >= DOWNSTREAM_TYPES
+    assert set(report["neurons_fired_by_cell_type"]) >= DOWNSTREAM_TYPES
     assert (tmp_path / "out.json").exists()
 
 

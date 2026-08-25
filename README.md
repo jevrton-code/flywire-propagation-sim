@@ -62,7 +62,10 @@ A infraestrutura de dados já foi construída para suportar múltiplos circuitos
   tempo sobre o grafo real (`src/flywire_sim/`), rodável via CLI
   (`python -m flywire_sim.run`), com estímulo configurável e 89 testes de
   estabilidade numérica e propagação.
-- [ ] Fase 3 — Backend (FastAPI + WebSocket)
+- [x] Fase 3 — Backend: API FastAPI (`src/flywire_api/`) com endpoints REST
+  de metadados/grafo/proveniência e WebSocket de streaming da simulação
+  passo a passo (`/ws/simulate`), rodável via `python -m flywire_api.run`
+  (Swagger em `/docs`). 73 novos testes (233 no total).
 - [ ] Fase 4 — Frontend (React)
 - [ ] Fase 5 — Testes finais e revisão
 
