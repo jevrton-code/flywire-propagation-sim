@@ -66,8 +66,26 @@ A infraestrutura de dados já foi construída para suportar múltiplos circuitos
   de metadados/grafo/proveniência e WebSocket de streaming da simulação
   passo a passo (`/ws/simulate`), rodável via `python -m flywire_api.run`
   (Swagger em `/docs`). 73 novos testes (233 no total).
-- [ ] Fase 4 — Frontend (React)
+- [x] Fase 4 — Frontend: app React + Vite (`frontend/`) com visualização do
+  grafo (3 layouts, incluindo um anel por tipo celular), streaming da
+  animação via WebSocket, inspetor de neurônios, e um painel sempre visível
+  com o disclaimer e as 13 simplificações do modelo. 80 testes automatizados
+  (vitest) e uma suíte de smoke test end-to-end contra o backend real
+  (`frontend/scripts/browser-smoke.mjs`, 26/26 checks).
 - [ ] Fase 5 — Testes finais e revisão
+
+## Rodando localmente
+
+```bash
+# backend
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
+python -m flywire_api.run          # http://127.0.0.1:8000 (Swagger em /docs)
+
+# frontend (outro terminal)
+cd frontend && npm install
+npm run dev                        # http://localhost:5173
+```
 
 ## Critério de "pronto" para v1
 
