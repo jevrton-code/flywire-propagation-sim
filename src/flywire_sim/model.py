@@ -335,7 +335,7 @@ class LIFSimulation:
         side: str | None = None,
         amplitude: float = 1.0,
         start: int = 1,
-        duration: int = 3,
+        duration: int = 6,
     ) -> Stimulus:
         """Build a :class:`Stimulus` from a user-facing selector."""
         targets = self.graph.select(root_ids=root_ids, cell_type=cell_type, side=side)

@@ -321,8 +321,10 @@ sinal padrão silencioso.
 campo `known_nt`, todos atribuídos a Turner-Evans et al. (2020). A predição
 automática concorda com a literatura em **148 dos 150** casos (98,7%).
 
-As 2 discordâncias são justamente as **duas predições de menor confiança de todo
-o conjunto**:
+As 2 discordâncias estão entre as **três predições de menor confiança de todo o
+conjunto**: são a 1ª e a 3ª mais baixas das 153 (a 2ª mais baixa,
+`720575940643558692`, `PEN_b(PEN2)`, confiança 0,382, *concorda* com a
+literatura):
 
 | `root_id` | Tipo | `top_nt` predito | Confiança | Literatura |
 | --- | --- | --- | --- | --- |

@@ -1,10 +1,14 @@
 /**
  * Fixtures shaped exactly like the real API responses.
  *
- * The values were copied from a live `GET /api/circuit/graph` and
- * `GET /api/circuit/cell-types` against the FastAPI backend, then cut down to a
- * handful of neurons. Root ids are the real 18-digit ones, kept as strings, so
- * the tests would catch any accidental `Number()` on the way through.
+ * This is a hand-built 5-neuron toy circuit, not a captured API response: the
+ * degrees, positions, weights and edges below are invented for test coverage
+ * and do not describe the real ring-attractor subgraph (some of these
+ * root_ids' real attributes differ). What *is* real is the `root_id` values
+ * themselves -- five genuine 18-digit FlyWire ids from the ring attractor
+ * core, kept as strings throughout, so the tests catch any accidental
+ * `Number()` coercion on the way through the app (which would silently lose
+ * precision on ids this large).
  */
 
 import type {
@@ -86,8 +90,9 @@ export const NEURONS: Neuron[] = [
     side: 'left',
     sign: 1,
     polarity: 'excitatory',
-    // A neuron the dataset has no transmitter or soma position for: the UI has
-    // to say "não disponível", not fill in something plausible.
+    // Nulled out here on purpose (this neuron has real values in the actual
+    // dataset) to exercise the "não disponível" UI path instead of filling in
+    // something plausible.
     neurotransmitter: null,
     neurotransmitter_source: null,
     position: { x: null, y: null, z: null },

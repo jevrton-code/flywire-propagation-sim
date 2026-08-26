@@ -19,8 +19,9 @@ Dorkenwald et al. (2024) do. That is the right default for a *dataset*: it
 reproduces the published pipeline faithfully.
 
 It is not the right default for the *simulation*. Two of the 153 neurons get a
-sign that contradicts the established literature, and both are the two
-lowest-confidence predictions in the whole set (see ``data/README.md`` §6.3):
+sign that contradicts the established literature, and both are among the three
+lowest-confidence predictions in the whole set -- they rank 1st and 3rd of 153
+(see ``data/README.md`` §6.3):
 
 * ``720575940617752537`` (``Delta7``) predicted cholinergic at confidence 0.354,
   literature says glutamate -> should be inhibitory;

@@ -216,7 +216,10 @@ export function StimulusPanel(props: StimulusPanelProps) {
             max={Math.min(200, maxSteps)}
             step={1}
             value={form.steps}
-            onChange={(event) => patch({ steps: Number(event.target.value) })}
+            onChange={(event) => {
+              const steps = Number(event.target.value);
+              patch({ steps, duration: Math.min(form.duration, steps) });
+            }}
           />
         </label>
 
